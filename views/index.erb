@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+​
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+​
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script src="https://assets.braintreegateway.com/v1/braintree-oauth-connect.js"></script>
+​
+</head>
+​
+<body>
+
+
+        <div id="bt-oauth-connect-container"></div>
+
+​
+  <script>
+  var connectUrl =  "<%= @url %>";
+  var partner = new BraintreeOAuthConnect({
+    connectUrl: connectUrl,
+    // the ID of a DOM element, a DOM node, or a jQuery object
+    container: 'bt-oauth-connect-container',
+    onError: function (errorObject) {
+      console.warn(errorObject.message);
+    }
+  });
+  </script>
+​
+​
+<footer class="footer">
+
+</footer>
+​
+​
+</body>
+</html>
