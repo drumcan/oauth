@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gem 'sinatra', '1.0'
 gem 'activerecord'
-gem 'sinatra-activerecord'
+gem 'sinatra-activerecord', '2.0.5'
 gem 'braintree'
 gem 'rake'
 
